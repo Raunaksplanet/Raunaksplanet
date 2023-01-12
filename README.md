@@ -8,9 +8,9 @@
 
 <p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
 
-- 🌱 I’m currently learning **C and Data Structure And Algorithm**
+- 🌱 I’m currently learning **C/C++ and D.S.A**
 
-- 💬 Ask me about **C and web development**
+- 💬 Ask me about **C/C++ and web development**
 
 - 📫 How to reach me **https://www.instagram.com/raunak_gupta193/**
 
