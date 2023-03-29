@@ -1,6 +1,6 @@
 [![MasterHead](https://free-template.co/wp-content/uploads/2022/03/1ab3dcce1711ccaf/anime-wallpaper-aesthetic-of-newyork.jpeg)](https://rishavchanda.io)
 <h1 align="center">Hi 👋, I'm Raunak Gupta</h1>
-<h3 align="center">A passionate web and android developer from India</h3>
+<h3 align="center">A passionate web and Programmer from India</h3>
 <img align="right" alt="Coding" width="400" src="https://media.tenor.com/BqbIhT4Mb7cAAAAd/programmer-rounded-edges.gif">
 
 
