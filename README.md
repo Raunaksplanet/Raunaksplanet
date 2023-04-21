@@ -1,36 +1,25 @@
-[![MasterHead](https://free-template.co/wp-content/uploads/2022/03/1ab3dcce1711ccaf/anime-wallpaper-aesthetic-of-newyork.jpeg)](https://rishavchanda.io)
-<h1 align="center">Hi 👋, I'm Raunak Gupta</h1>
-<h3 align="center">A passionate web and Programmer from India</h3>
-<img align="right" alt="Coding" width="400" src="https://media.tenor.com/BqbIhT4Mb7cAAAAd/programmer-rounded-edges.gif">
+# 💫 About Me:
+- 🌱 I'm currently working on **C and C++  and content creation on YouTube** <br> - 💬 I'm looking for help in **Cyber security mostly getting started with Penetration testing**<br>- 📫 I'm currently learning **Python and DSA in C**<br>- ⚡ Fun fact **I'm a chaotic programmer**
 
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=raunaksplanet&label=Profile%20views&color=ffd500&style=flat" alt="raunaksplanet" /> </p>
+# 🌐 Socials:
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/raunak_gupta193) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raunak-gupta-772408255) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@Raunaks_Teaching) 
 
-<p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
+# 💻 Tech Stack:
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobephotoshop-%2331A8FF.svg?style=for-the-badge&logo=adobephotoshop&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![LINUX](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=Raunaksplanet&theme=dark&hide_border=true&include_all_commits=false&count_private=false)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=Raunaksplanet&theme=dark&hide_border=true)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Raunaksplanet&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
 
-- 🌱 I’m currently learning **C/C++ and D.S.A**
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=Raunaksplanet&theme=discord&no-frame=false&no-bg=false&margin-w=4)
 
-- 💬 Ask me about **C/C++ and web development**
+### 🔝 Top Contributed Repo
+![](https://github-contributor-stats.vercel.app/api?username=Raunaksplanet&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
-- 📫 How to reach me **https://www.instagram.com/raunak_gupta193/**
+---
+[![](https://visitcount.itsvg.in/api?id=Raunaksplanet&icon=7&color=0)](https://visitcount.itsvg.in)
 
-- ⚡ Fun fact **I'm little chaotic**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://instagram.com/raunak_gupta193" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="raunak_gupta193" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/raunak's vlog" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="raunak's vlog" height="30" width="40" /></a>
-</p>
-
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </p>
-
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=raunaksplanet&show_icons=true&locale=en&layout=compact" alt="raunaksplanet"</p>
-
-<br>
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=raunaksplanet&show_icons=true&theme=dark&locale=en" alt="raunaksplanet" /></p>
-
-<br>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=raunaksplanet&theme=dark" alt="raunaksplanet" /></p>
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
