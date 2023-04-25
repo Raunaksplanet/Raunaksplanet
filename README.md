@@ -1,3 +1,5 @@
+[![](https://visitcount.itsvg.in/api?id=Raunaksplanet&icon=7&color=0)](https://visitcount.itsvg.in)
+---
 # 💫 About Me:
 - 🌱 I'm currently working on **C and C++  and content creation on YouTube** <br> - 💬 I'm looking for help in **Cyber security mostly getting started with Penetration testing**<br>- 📫 I'm currently learning **Python and DSA in C**<br>- ⚡ Fun fact **I'm a chaotic programmer**
 
@@ -18,8 +20,3 @@
 
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=Raunaksplanet&limit=5&theme=dark&combine_all_yearly_contributions=true)
-
----
-[![](https://visitcount.itsvg.in/api?id=Raunaksplanet&icon=7&color=0)](https://visitcount.itsvg.in)
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
