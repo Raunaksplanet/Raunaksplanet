@@ -1,7 +1,7 @@
 [![](https://visitcount.itsvg.in/api?id=Raunaksplanet&icon=7&color=0)](https://visitcount.itsvg.in)
 ---
 # 💫 About Me:
-- 🌱 I'm currently working on **C++, Java, Python and content creation on YouTube** <br> - 💬 I'm looking for help in **Cyber security mostly getting started with Penetration testing**<br>- 📫 I'm currently learning **Oops in C++ & working on mini projects of Python**<br>- ⚡ Fun fact **I'm a chaotic programmer**
+- 🌱 I'm currently working on **C++, Java, Python and content creation on YouTube** <br> - 💬 I'm looking for help in **Cyber security mostly getting started with Penetration testing**<br>- 📫 I'm currently learning **Java & working on mini projects of Python**<br>- ⚡ Fun fact **I'm a chaotic programmer**
 
 
 # 🌐 Socials:
