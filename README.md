@@ -1,11 +1,11 @@
 [![](https://visitcount.itsvg.in/api?id=Raunaksplanet&icon=7&color=0)](https://visitcount.itsvg.in)
 ---
 # 💫 About Me:
-- 🌱 I'm currently working on **C++, Java, Python and content creation on YouTube** <br> - 💬 I'm looking for help in **Cyber security mostly getting started with Penetration testing**<br>- 📫 I'm currently learning **Java & working on projects of Python**<br>- ⚡ Fun fact **I'm a chaotic programmer**
+- 🌱 I'm currently working on **Java, PHP, JS and content creation on YouTube** <br> - 💬 I'm looking for help in **Cyber security mostly getting started with Penetration testing**<br>- 📫 I'm currently learning **Java, PHP & working on PHP Projects **<br>- ⚡ Fun fact **I'm a chaotic programmer**
 
 
 # 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/raunak_gupta193) 
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/raunak_gupta.psd) 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raunak-gupta-772408255) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@Raunaks_Teaching) 
 
 # 💻 Tech Stack:
