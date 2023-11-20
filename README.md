@@ -20,3 +20,6 @@
 
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=Raunaksplanet&limit=5&theme=dark&combine_all_yearly_contributions=true)
+
+### 🔝 My TryHackMe stats
+<img src="https://tryhackme-badges.s3.amazonaws.com/oreobiscuit656.png" alt="TryHackMe">
