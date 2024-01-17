@@ -1,7 +1,7 @@
 # 💫 About Me:
 - 🌱 I'm currently learning & working on **Bash, PHP, JS** and **content creation on YouTube** <br>
 - 💬 I'm looking for a **Mentor** who can Guide me for **Application Security** <br>
-- 📫 I'm currently playing CTF'S on **THM, HTB, Proving grounds, picoCTF** <br>
+- 📫 I'm currently playing CTF's on **THM, HTB, Proving grounds, picoCTF** <br>
 - ⚡ Fun fact I'm a **chaotic programmer** & a **noob heker**
 
 
