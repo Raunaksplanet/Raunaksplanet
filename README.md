@@ -1,14 +1,14 @@
 # 💫 About Me:
-- 🌱 I'm currently learning & working on **Bash, PHP, JS** and **content creation on YouTube** <br>
-- 💬 I'm looking for a **Mentor** who can Guide me for **Application Security** <br>
+- 🌱 I'm currently started with **Bug Bounty** <br>
+- 💬 I'm looking for a **Mentor** who can Guide me for **Web App penetration testing** <br>
 - 📫 I'm currently playing CTF's on **THM, HTB, Proving grounds, picoCTF** <br>
 - ⚡ Fun fact I'm a **chaotic programmer** & a **noob heker**
+- 🕵🏽‍♂️ I enjoy learning about security of everything made up of **0s and 1's**
 
 
 # 🌐 Socials:
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raunak-gupta-772408255) 
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/raunak_gupta.cpp) 
-[![YouTube](https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@Raunaks_Teaching) 
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ronakgupta935/) 
 
 ## Tools 
 <p align="left">
