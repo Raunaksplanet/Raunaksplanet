@@ -1,5 +1,11 @@
 # About Me:
-BCA graduate specializing in Cyber Security. Enthusiast of the OWASP Top Ten, ranked in the top 2% on TryHackMe. Infosec blogger on Medium, CTF player, and builder of security tools for bug bounty hunting. Aspiring security researcher and future CISO.
+- BCA graduate specializing in Cyber Security. 
+- Enthusiast of the OWASP Top Ten, 
+- ranked in the top 2% on TryHackMe. 
+- Infosec blogger on Medium, 
+- CTF player, and 
+- builder of security tools for bug bounty hunting. 
+- Aspiring security researcher and future CISO.
 
 # Socials:
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raunak-gupta-772408255) 
