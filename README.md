@@ -14,6 +14,7 @@
 
 # Projects:
 - [LinkFinder Web V2](https://github.com/Raunaksplanet/LinkFinder-Web-Version) - Extract links, endpoints, from JS resources from web pages using over +1400 regex.
+- [Google Dorks Search Engine](https://github.com/Raunaksplanet/Elite-Google-Dorks-Search-by-Biscuit) - Dorks Search Engine for Bug Bounty Hunters With Largest & Smartest Dorks. 
 
 # Miscellaneous Projects:
 - [My CS Store](https://github.com/Raunaksplanet/My-CyberSecurity-Store) - Cyber Security notes from various sources
