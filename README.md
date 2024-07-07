@@ -1,5 +1,6 @@
 # About Me:
-- BCA graduate specializing in Cyber Security. 
+- BCA graduate specializing in Cyber Security.
+- Founder of Biscuit Security
 - Enthusiast of the OWASP Top Ten, 
 - ranked in the top 2% on TryHackMe. 
 - Infosec blogger on Medium, 
