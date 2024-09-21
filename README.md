@@ -1,11 +1,8 @@
 # About Me:
-- BCA graduate specializing in Cyber Security.
+- Infosec Blogger Medium
 - Founder of Biscuit Security
-- Enthusiast of the OWASP Top Ten, 
 - ranked in the top 2% on TryHackMe. 
-- Infosec blogger on Medium, 
 - CTF player, and 
-- builder of security tools for bug bounty hunting. 
 - Aspiring security researcher and future CISO.
 
 # Socials:
@@ -18,8 +15,8 @@
 - [Google Dorks Search Engine](https://github.com/Raunaksplanet/Elite-Google-Dorks-Search-by-Biscuit) - Dorks Search Engine for Bug Bounty Hunters With Largest & Smartest Dorks. 
 
 # Miscellaneous Projects:
-- [My CS Store](https://github.com/Raunaksplanet/My-CyberSecurity-Store) - Cyber Security notes from various sources
 - [Biscuit's BB Playbook](https://oreobiscuit.gitbook.io/untitled) - Gitbook containing all the gathered important resources, links, writeups, articles, tools, and more that you need to learn about Cyber Security, Bug Bounty, Ethical Hacking.
+- [Parody News Web App](https://newstaza.vercel.app/) - A simple Parody New Web App to cover all the sarcastic and humors News around Cyber Security & Bug Bounty Hunters
 
 ## Tools 
 <p align="left">
@@ -54,15 +51,11 @@
 ![Adobe Photoshop](https://img.shields.io/badge/adobephotoshop-%2331A8FF.svg?style=for-the-badge&logo=adobephotoshop&logoColor=white)
 
 # GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Raunaksplanet&theme=dark&hide_border=true&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=Raunaksplanet&theme=dark&hide_border=true)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Raunaksplanet&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
-
-## GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=Raunaksplanet&theme=discord&no-frame=false&no-bg=false&margin-w=4)
-
+![](https://github-readme-stats.vercel.app/api?username=Raunaksplanet&theme=dark&hide_border=true&include_all_commits=false&count_private=false)
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Raunaksplanet&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=Raunaksplanet&theme=dark&hide_border=true)
 ### Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=Raunaksplanet&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
-### My TryHackMe stats
-<img src="https://tryhackme-badges.s3.amazonaws.com/oreobiscuit656.png" alt="TryHackMe">
+## GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=Raunaksplanet&theme=discord&no-frame=false&no-bg=false&margin-w=4)
