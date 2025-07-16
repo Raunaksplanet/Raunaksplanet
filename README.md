@@ -2,8 +2,7 @@
 
 - Freelance Security Researcher & Bug Bounty Hunter  
 - Specializing in Android, Web, and API Security  
-- Founder of Biscuit Security  
-- Ranked in the top 2% on TryHackMe  
+- Founder of Biscuit Security   
 - CTF Player  
 - Passionate about Open-Source, AI, and LLMs  
 - Aspiring Security Researcher & Future CISO  
