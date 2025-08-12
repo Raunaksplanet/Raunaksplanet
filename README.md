@@ -1,99 +1,40 @@
-# About Me
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1000&width=435&lines=Hello+From+Raunak+Gupta!!)](https://git.io/typing-svg)
 
-- Freelance Security Researcher & Bug Bounty Hunter  
-- Specializing in Android, Web, and API Security  
-- Founder of Biscuit Security   
-- CTF Player  
-- Passionate about Open-Source, AI, and LLMs  
-- Aspiring Security Researcher & Future CISO  
+<img src="https://raw.githubusercontent.com/Raunaksplanet/Raunaksplanet/refs/heads/main/Untitled%20design.png" alt="header image"/>
 
-## 🌐 Connect With Me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/in/raunak-gupta-772408255) 
-[![Medium](https://img.shields.io/badge/Medium-%2312100E.svg?logo=medium&logoColor=white&style=for-the-badge)](https://medium.com/@RaunakGupta1922) 
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white&style=for-the-badge)](https://x.com/OreoBiscui74046) 
-[![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42.svg?logo=tryhackme&logoColor=white&style=for-the-badge)](https://tryhackme.com/p/RaunakGupta)
-
-## 🚀 Featured Projects
-
-### [LinkFinder Web V2](https://github.com/Raunaksplanet/LinkFinder-Web-Version)
-Advanced web-based tool to extract links and endpoints from JS resources using 1400+ regex patterns.
-
-### [Elite Google Dorks Search](https://github.com/Raunaksplanet/Elite-Google-Dorks-Search-by-Biscuit)
-The most comprehensive Google Dorks collection for bug bounty hunters and security researchers.
-
-### [Android Export Viewer](https://github.com/Raunaksplanet/AndroidExportViewer)
-Extracts exported components (activities, services, receivers) from Android apps for security analysis.
-
-### [BugBash One](https://github.com/Raunaksplanet/BugBash-One)
-One-stop automation script to set up essential bug bounty tools instantly.
-
-## 📚 Knowledge Base
-
-### [Biscuit's BB Playbook](https://oreobiscuit.gitbook.io/untitled)
-Curated collection of tools, writeups, and learning paths for ethical hackers.
-
-## ✍️ Blogs & Writeups
-
-- **[Exploiting Broken Access Control to Access My College Panel](https://b1scuit.pro)**  
-- **[IDOR on GeeksForGeeks – Comment Section Takeover](https://b1scuit.pro)**  
-- **[From JS Recon to HTML Injection](https://b1scuit.pro)**  
-- **[Hacking Hospital: Mass PII Leak](https://b1scuit.pro)**  
-- **[30 Must-Read Books to Learn Hacking](https://b1scuit.pro)**  
-- **[55 YouTube Channels to Learn Hacking](https://b1scuit.pro)**  
-- **[Bug Bounty vs Motivation](https://b1scuit.pro)**  
-- **[Bug Bounty vs Procrastination](https://b1scuit.pro)**  
-
-## 📄 Infosec Docs
-
-- Insecure Direct Object References (IDOR)  
-- WordPress Pentesting Guide  
-- GraphQL API Security Testing  
-- Burp Suite Guide  
-- Browser Extensions for Bug Bounty
-
-## 🎭 Fun Projects
-
-### [Parody News Web App](https://newstaza.vercel.app/)
-Sarcastic news aggregator for humorous takes on cybersecurity and tech culture.
-
-## 🛠️ Tools I Use
-
-<p align="left">
-  <img src="https://image.spreadshirtmedia.com/image-server/v1/compositions/T1040A14PA2252PT32X45Y15D1048988355W3400H3400CxF36916%3AxFFFFFF/views/1,width=650,height=650,appearanceId=14,backgroundColor=ffffff/burp-suite-icon.jpg" alt="Burp Suite" width="50" height="50"/>
-  <img src="https://nmap.org/images/nmap-logo-256x256.png" alt="Nmap" width="50" height="50"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Wireshark_icon_new.png" alt="Wireshark" width="50" height="50"/>
-  <img src="https://github.com/V31L0x1/V31L0X1/assets/63537300/21c03dfd-00a4-45b5-a226-f0d87faa7f65" alt="John the Ripper" width="50" height="50"/>
-  <img src="https://pbs.twimg.com/profile_images/1425873977327726596/XR0uNrj3_400x400.jpg" alt="Hashcat" width="50" height="50"/>
-  <img src="https://play-lh.googleusercontent.com/PjfzpTbZMKywkKDtX1dLkzZroAZCLTwGrwIL3acVg_-DGeP4dYkKt_Z6R8bpaOReLQ" alt="Metasploit" width="50" height="50"/>
+<p align='center'> 
+<a href="https://www.linkedin.com/in/raunak-gupta-772408255/"><img height="25" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>&nbsp;&nbsp;
+<a href="https://x.com/OreoB1scuit"><img height="25" src="https://img.shields.io/badge/Twitter-%231DA1F1.svg?&style=for-the-badge&logo=X&logoColor=white"></a>&nbsp;&nbsp;
+<a href="https://github.com/Raunaksplanet"><img height="25" src="https://img.shields.io/badge/GitHub-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white"></a>&nbsp;&nbsp;
+<a href="https://medium.com/@RaunakGupta1922"><img height="25" src="https://img.shields.io/badge/Medium-%23000000.svg?&style=for-the-badge&logo=medium&logoColor=white"></a>&nbsp;&nbsp;
+<a href="https://yeswehack.com/hunters/B1scuit#latest-hacktivity"><img height="25" src="https://img.shields.io/badge/YesWeHack-%23000000.svg?&style=for-the-badge&logo=bug&logoColor=white"></a>&nbsp;&nbsp;
+<a href="https://hackerone.com/raunakgupta100100?type=user"><img height="25" src="https://img.shields.io/badge/HackerOne-%23000000.svg?&style=for-the-badge&logo=hackerrank&logoColor=white"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/@BiscuitSecurity/featured"><img height="25" src="https://img.shields.io/badge/YouTube-%23FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white"></a>&nbsp;&nbsp;
+<a href="https://discord.gg/8SSx5Ma9ve"><img height="25" src="https://img.shields.io/badge/Discord-%235865F2.svg?&style=for-the-badge&logo=discord&logoColor=white"></a>&nbsp;&nbsp;
 </p>
 
-## 💻 Tech Stack
+### 👋 Hi, I'm Raunak (B1scuit)
+    Security Researcher | Bug Bounty Hunter
+### 🛠️ What I'm Working On
 
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) 
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) 
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
-![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white) 
-![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white) 
-![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) 
-![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
-![Bash](https://rb.gy/8jjy3r) 
-![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white) 
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+📱 Researching vulnerabilities in Android/iOS, Web, and APIs  
+✍️ Sharing bug bounty tips and resources on **[Medium](https://medium.com/@RaunakGupta1922)** & **[YouTube](https://www.youtube.com/@BiscuitSecurity/featured)**  
+🛡️ Creating open-source tools for security testing  
+🎯 Helping organizations secure their digital assets via ethical hacking
 
-## 📊 GitHub Analytics  
-
-![](https://github-readme-stats.vercel.app/api?username=Raunaksplanet&theme=dark&hide_border=true&include_all_commits=false&count_private=false) 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Raunaksplanet&theme=dark&hide_border=true&layout=compact)  
-![](https://github-readme-streak-stats.herokuapp.com/?user=Raunaksplanet&theme=dark&hide_border=true)
-
-### 🏆 GitHub Trophies  
-![](https://github-profile-trophy.vercel.app/?username=Raunaksplanet&theme=discord&no-frame=false&no-bg=false&margin-w=4)
 
 ---
 
-For full portfolio: **[https://b1scuit.pro](https://b1scuit.pro)**
+### 🚀 Highlighted Projects
+
+| 📦 Project | 🛠️ Description |
+|---|---|
+| **[My CyberSecurity Store](https://github.com/Raunaksplanet/My-CyberSecurity-Store)** | A comprehensive collection of learning resources and notes on various cybersecurity topics. |
+| **[Elite Google Dorks Search by Biscuit](https://github.com/Raunaksplanet/Elite-Google-Dorks-Search-by-Biscuit)** | Smart and improved Google search queries to discover hidden information on the web. |
+| **[Bug Bounty GitBook](https://github.com/Raunaksplanet/Bug-Bounty-GitBook)** | Biscuit's Bug Bounty Playbook — tools, methodologies, writeups, labs, checklists, and more. |
+| **[Learn Android Bug Bounty](https://github.com/Raunaksplanet/Learn-android-bug-bounty)** | Curated resources for getting started with mobile bug bounty (Android/iOS). |
+| **[Android Manifest Analyzer](https://github.com/Raunaksplanet/analyze_manifest)** | Analyze AndroidManifest.xml for vulnerabilities, extract deep links, and more. |
+
+…and more: security tools, vulnerability demos, and educational resources!
+
+⭐ If you like my work, consider giving a ⭐ to support!
