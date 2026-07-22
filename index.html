@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raunak Gupta — Security Researcher</title>
+<meta name="description" content="Raunak Gupta (B1scuit Security) — bug bounty hunter and security researcher. Vulnerability disclosures across web, API, Android, iOS, and thick-client applications.">
+<meta property="og:title" content="Raunak Gupta — Security Researcher">
+<meta property="og:description" content="Bug bounty hunter and security researcher. Credited by Supabase, Zerodha, Telekom, Motorola Solutions, and others.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Raunak Gupta — Security Researcher">
+<meta name="twitter:description" content="Bug bounty hunter and security researcher. Credited by Supabase, Zerodha, Telekom, Motorola Solutions, and others.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A0A0B'/><text x='50' y='68' text-anchor='middle' font-size='48' font-family='monospace' fill='%23FF4E33'>B1</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0B;
+    --bg-alt:#111113;
+    --card:#161618;
+    --line:#26262A;
+    --text:#F4F4F2;
+    --muted:#8C8C92;
+    --dim:#5B5B60;
+    --accent:#FF4E33;
+    --accent-soft:rgba(255,78,51,0.12);
+    --display:'Space Grotesk', sans-serif;
+    --sans:'Inter', system-ui, sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --nav-h:64px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h);}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important;}
+  }
+
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--accent);color:#0A0A0B;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  img,svg,video{max-width:100%;height:auto;}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px;width:100%;}
+
+  /* PROGRESS */
+  .progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:100;pointer-events:none;}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,11,0.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:1080px;margin:0 auto;padding:0 32px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;}
+  .nav-left{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--muted);flex-shrink:0;min-width:0;}
+  .nav-left .clockdot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite;flex-shrink:0;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  .navlinks{display:flex;gap:18px;align-items:center;}
+  .navlinks button{background:none;border:none;font-family:var(--mono);font-size:11.5px;letter-spacing:.4px;color:var(--muted);cursor:pointer;text-transform:uppercase;padding:6px 0;position:relative;transition:color .15s;-webkit-tap-highlight-color:transparent;}
+  .navlinks button::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--accent);transition:width .18s;}
+  .navlinks button:hover, .navlinks button.active{color:var(--text);}
+  .navlinks button.active::after, .navlinks button:hover::after{width:100%;}
+  .nav-status{font-family:var(--mono);font-size:11px;color:var(--accent);border:1px solid rgba(255,78,51,0.35);background:var(--accent-soft);padding:6px 12px;border-radius:20px;white-space:nowrap;display:flex;align-items:center;gap:7px;flex-shrink:0;}
+  .nav-status .d{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);color:var(--muted);width:40px;height:40px;border-radius:8px;cursor:pointer;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;-webkit-tap-highlight-color:transparent;}
+  .nav-toggle:hover{border-color:var(--accent);color:var(--text);}
+
+  /* HERO */
+  .hero{padding:88px 0 72px;position:relative;}
+  .hero-tag{font-family:var(--mono);font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;gap:8px;}
+  .hero-tag .d{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+  .hero-name{font-family:var(--display);font-weight:700;font-size:clamp(44px,11vw,120px);line-height:.94;letter-spacing:-.04em;text-transform:uppercase;word-break:break-word;}
+  .hero-name .ghost{color:transparent;-webkit-text-stroke:1px var(--line);}
+  .hero-role{display:flex;align-items:center;gap:12px;margin-top:20px;flex-wrap:wrap;row-gap:8px;}
+  .hero-role span{font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;}
+  .hero-role .sep{width:20px;height:1px;background:var(--line);flex-shrink:0;}
+  .hero p.lede{max-width:62ch;color:var(--muted);font-size:16px;margin-top:24px;line-height:1.7;}
+  .hero p.lede b{color:var(--text);font-weight:600;}
+  .hero p.lede a{color:var(--text);border-bottom:1px solid var(--dim);transition:color .15s,border-color .15s;word-break:break-word;}
+  .hero p.lede a:hover{color:var(--accent);border-color:var(--accent);}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}
+  .btn{font-family:var(--mono);font-size:12px;letter-spacing:.4px;text-transform:uppercase;padding:12px 18px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:background .15s,border-color .15s,color .15s,transform .15s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-align:center;-webkit-tap-highlight-color:transparent;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--accent);color:#0A0A0B;border-color:var(--accent);font-weight:600;}
+  .btn-primary:hover{background:#ff634d;}
+  .btn-ghost{background:transparent;color:var(--muted);border-color:var(--line);}
+  .btn-ghost:hover{color:var(--text);border-color:var(--accent);}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .hero-stats div{padding:20px 16px;border-right:1px solid var(--line);min-width:0;}
+  .hero-stats div:last-child{border-right:none;}
+  .hero-stats strong{display:block;font-family:var(--display);font-size:clamp(22px,4vw,28px);font-weight:700;letter-spacing:-.5px;margin-bottom:4px;}
+  .hero-stats span{font-family:var(--mono);font-size:10.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.4px;line-height:1.35;display:block;}
+
+  /* SECTION SHELL */
+  section.block{padding:88px 0;border-top:1px solid var(--line);}
+  section.block.alt{background:var(--bg-alt);}
+  .sec-head{margin-bottom:36px;max-width:720px;}
+  .sec-head .eyebrow{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+  .sec-head .eyebrow::after{content:'';flex:1;max-width:48px;height:1px;background:rgba(255,78,51,0.4);}
+  .sec-title{font-family:var(--display);font-weight:600;font-size:clamp(26px,5vw,40px);letter-spacing:-.03em;margin-bottom:12px;line-height:1.15;}
+  .sec-note{color:var(--muted);font-size:15px;max-width:58ch;line-height:1.65;}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:start;}
+  .about-grid p{color:var(--muted);font-size:15.5px;margin-bottom:16px;max-width:58ch;line-height:1.7;}
+  .about-grid p b{color:var(--text);font-weight:600;}
+  .facts{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px 18px;}
+  .facts div{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.35px;}
+  .facts div:last-child{border-bottom:none;}
+  .facts div > :first-child{flex-shrink:0;}
+  .facts div span{color:var(--text);text-transform:none;font-family:var(--sans);font-size:13.5px;text-align:right;font-weight:500;line-height:1.4;min-width:0;word-break:break-word;}
+  .facts div a{border-bottom:1px solid var(--dim);transition:color .15s,border-color .15s;}
+  .facts div a:hover{color:var(--accent);border-color:var(--accent);}
+
+  /* RECOGNITION */
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:40px;}
+  .rec-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;transition:border-color .18s, transform .18s, box-shadow .18s;display:flex;flex-direction:column;min-height:0;}
+  .rec-card:hover{border-color:rgba(255,78,51,0.55);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.35);}
+  .rec-card .tag{display:inline-block;align-self:flex-start;font-family:var(--mono);font-size:10px;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px;margin-bottom:12px;}
+  .rec-card .tag.critical{color:var(--accent);background:var(--accent-soft);border:1px solid rgba(255,78,51,0.4);}
+  .rec-card .tag.high{color:#FFB4A6;background:rgba(255,180,166,0.08);border:1px solid rgba(255,180,166,0.28);}
+  .rec-card .tag.cve{color:#8CD4C4;background:rgba(140,212,196,0.08);border:1px solid rgba(140,212,196,0.28);}
+  .rec-card h3{font-family:var(--display);font-size:16.5px;font-weight:600;margin-bottom:6px;line-height:1.3;word-break:break-word;}
+  .rec-card h3 a{transition:color .15s;}
+  .rec-card h3 a:hover{color:var(--accent);}
+  .rec-card p{color:var(--muted);font-size:13px;line-height:1.5;margin-top:auto;}
+  .rec-card .go{font-family:var(--mono);font-size:10.5px;color:var(--dim);margin-top:12px;letter-spacing:.3px;text-transform:uppercase;transition:color .15s;}
+  .rec-card:hover .go{color:var(--accent);}
+
+  .rec-more-label{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--dim);margin-bottom:4px;display:flex;align-items:center;gap:12px;}
+  .rec-more-label::after{content:'';flex:1;height:1px;background:var(--line);}
+  .rec-list{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;}
+  .rec-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:start;}
+  .rec-row .name{font-size:14px;font-weight:500;min-width:0;word-break:break-word;}
+  .rec-row .name a{transition:color .15s;}
+  .rec-row .name a:hover{color:var(--accent);}
+  .rec-row .desc{grid-column:1;font-size:12px;color:var(--dim);line-height:1.4;min-width:0;}
+  .rec-row .sev{font-family:var(--mono);font-size:10px;letter-spacing:.4px;text-transform:uppercase;color:var(--dim);white-space:nowrap;padding-top:2px;}
+
+  /* METHODOLOGY */
+  .method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .method-card{border:1px solid var(--line);border-radius:10px;padding:22px 18px;background:var(--bg);transition:border-color .18s;}
+  .method-card:hover{border-color:rgba(255,78,51,0.4);}
+  .method-num{font-family:var(--mono);color:var(--accent);font-size:11.5px;margin-bottom:14px;letter-spacing:.4px;}
+  .method-card h3{font-family:var(--display);font-size:18px;font-weight:600;margin-bottom:12px;}
+  .method-card ul{list-style:none;color:var(--muted);font-size:13.5px;}
+  .method-card li{padding:8px 0;border-top:1px solid var(--line);line-height:1.45;}
+  .method-card li:first-child{border-top:none;padding-top:0;}
+
+  /* PROJECTS */
+  .proj-filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+  .proj-filters button{font-family:var(--mono);font-size:11px;letter-spacing:.35px;text-transform:uppercase;background:transparent;border:1px solid var(--line);color:var(--muted);padding:7px 12px;border-radius:16px;cursor:pointer;transition:color .15s,border-color .15s,background .15s;-webkit-tap-highlight-color:transparent;}
+  .proj-filters button:hover{color:var(--text);border-color:var(--dim);}
+  .proj-filters button.active{color:var(--accent);border-color:rgba(255,78,51,0.45);background:var(--accent-soft);}
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .proj-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 15px;transition:border-color .18s, transform .18s;display:flex;flex-direction:column;min-width:0;}
+  .proj-card.hidden{display:none;}
+  .proj-card:hover{border-color:rgba(255,78,51,0.5);transform:translateY(-2px);}
+  .proj-card .cat{font-family:var(--mono);font-size:10px;letter-spacing:.45px;text-transform:uppercase;color:var(--dim);margin-bottom:6px;}
+  .proj-card a{font-weight:600;font-size:13.5px;line-height:1.3;transition:color .15s;word-break:break-word;}
+  .proj-card a:hover{color:var(--accent);}
+  .proj-card p{color:var(--muted);font-size:12px;margin-top:4px;line-height:1.4;}
+
+  /* SKILLS */
+  .skill-line{color:var(--muted);font-size:15px;max-width:68ch;margin-bottom:12px;line-height:1.7;}
+  .skill-line b{color:var(--text);font-weight:600;}
+  .tag-cloud{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px;}
+  .tag-cloud span{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--line);padding:7px 12px;border-radius:16px;transition:color .15s,border-color .15s,background .15s;}
+  .tag-cloud span:hover{color:var(--text);border-color:var(--dim);background:var(--card);}
+
+  /* WRITING */
+  .posts{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);}
+  .post{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line);transition:background .15s;}
+  .post:last-child{border-bottom:none;}
+  .post:hover{background:rgba(255,255,255,0.02);}
+  .post a{font-weight:500;font-size:13.5px;line-height:1.4;transition:color .15s;flex:1;min-width:0;word-break:break-word;}
+  .post a:hover{color:var(--accent);}
+  .post span{font-family:var(--mono);font-size:10px;color:var(--dim);white-space:nowrap;text-transform:uppercase;letter-spacing:.35px;flex-shrink:0;padding-top:2px;}
+
+  /* FOOTER */
+  footer{padding:88px 0 36px;border-top:1px solid var(--line);}
+  .footer-cta{font-family:var(--display);font-weight:700;font-size:clamp(30px,8vw,56px);letter-spacing:-.03em;margin-bottom:14px;line-height:1.05;}
+  .footer-cta .out{-webkit-text-stroke:1px var(--line);color:transparent;}
+  .footer-sub{color:var(--muted);font-size:15px;max-width:42ch;margin-bottom:28px;line-height:1.65;}
+  .footer-links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:48px;}
+  .footer-links a{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.3px;color:var(--muted);border:1px solid var(--line);padding:9px 14px;border-radius:18px;transition:color .15s,border-color .15s,background .15s;}
+  .footer-links a:hover{color:var(--text);border-color:var(--accent);background:var(--accent-soft);}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line);padding-top:20px;font-family:var(--mono);font-size:11px;color:var(--dim);}
+  .footer-bottom button{background:none;border:none;color:var(--dim);font-family:var(--mono);font-size:11px;cursor:pointer;text-transform:uppercase;letter-spacing:.3px;transition:color .15s;padding:4px 0;-webkit-tap-highlight-color:transparent;}
+  .footer-bottom button:hover{color:var(--text);}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease, transform .5s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;}}
+
+  /* ========== TABLET ========== */
+  @media(max-width:900px){
+    .rec-grid{grid-template-columns:repeat(2,1fr);}
+    .proj-grid{grid-template-columns:repeat(2,1fr);}
+    .method-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;gap:28px;}
+    .rec-list{grid-template-columns:1fr;}
+  }
+
+  /* ========== MOBILE NAV ========== */
+  @media(max-width:860px){
+    .navlinks{
+      display:none;
+      position:fixed;
+      top:var(--nav-h);
+      left:0;right:0;
+      background:rgba(10,10,11,0.98);
+      border-bottom:1px solid var(--line);
+      flex-direction:column;
+      align-items:stretch;
+      gap:0;
+      padding:8px 16px 16px;
+      max-height:calc(100dvh - var(--nav-h));
+      overflow-y:auto;
+      z-index:60;
+    }
+    .navlinks.open{display:flex;}
+    .navlinks button{
+      text-align:left;
+      padding:15px 4px;
+      border-bottom:1px solid var(--line);
+      font-size:13px;
+      width:100%;
+    }
+    .navlinks button:last-child{border-bottom:none;}
+    .navlinks button::after{display:none;}
+    .navlinks button.active{color:var(--accent);}
+    .nav-toggle{display:flex;}
+    .nav-status{display:none;}
+  }
+
+  /* ========== MOBILE ========== */
+  @media(max-width:700px){
+    :root{--nav-h:58px;}
+    .wrap{padding:0 16px;}
+    .nav-inner{padding:0 16px;gap:12px;}
+    .nav-left{font-size:11px;gap:6px;}
+
+    .hero{padding:40px 0 36px;}
+    .hero-tag{font-size:11px;margin-bottom:18px;letter-spacing:.8px;}
+    .hero-name{font-size:clamp(40px,12.5vw,64px);letter-spacing:-.035em;line-height:.95;}
+    .hero-role{margin-top:16px;gap:8px 10px;}
+    .hero-role span{font-size:11px;}
+    .hero-role .sep{display:none;}
+    .hero-role span:not(:last-child)::after{content:'·';margin-left:10px;color:var(--line);}
+    .hero p.lede{font-size:14.5px;margin-top:18px;line-height:1.65;}
+    .hero-cta{margin-top:22px;flex-direction:column;}
+    .hero-cta .btn{width:100%;padding:13px 16px;}
+    .hero-stats{grid-template-columns:1fr 1fr;margin-top:28px;border-radius:10px;}
+    .hero-stats div{padding:14px 12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+    .hero-stats div:nth-child(2n){border-right:none;}
+    .hero-stats div:nth-child(3),
+    .hero-stats div:nth-child(4){border-bottom:none;}
+    .hero-stats strong{font-size:22px;}
+    .hero-stats span{font-size:10px;}
+
+    section.block{padding:56px 0;}
+    .sec-head{margin-bottom:24px;}
+    .sec-head .eyebrow{font-size:11px;margin-bottom:10px;letter-spacing:1px;}
+    .sec-title{font-size:clamp(24px,7vw,32px);margin-bottom:10px;}
+    .sec-note{font-size:14px;}
+
+    .about-grid p{font-size:14.5px;margin-bottom:14px;}
+    .facts{padding:2px 14px;border-radius:10px;}
+    .facts div{flex-direction:column;align-items:flex-start;gap:4px;padding:12px 0;font-size:10.5px;}
+    .facts div span{text-align:left;font-size:13.5px;}
+
+    .rec-grid{grid-template-columns:1fr;gap:10px;margin-bottom:28px;}
+    .rec-card{padding:16px;border-radius:10px;}
+    .rec-card:hover{transform:none;box-shadow:none;}
+    .rec-card h3{font-size:16px;}
+    .rec-card p{font-size:12.5px;}
+    .rec-row{padding:12px 0;gap:4px 10px;}
+    .rec-row .name{font-size:13.5px;}
+    .rec-row .desc{font-size:11.5px;}
+
+    .method-card{padding:18px 16px;border-radius:10px;}
+    .method-card h3{font-size:17px;margin-bottom:10px;}
+    .method-card ul{font-size:13px;}
+
+    .proj-filters{gap:6px;margin-bottom:14px;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:none;}
+    .proj-filters::-webkit-scrollbar{display:none;}
+    .proj-filters button{flex-shrink:0;padding:8px 12px;font-size:10.5px;}
+    .proj-grid{grid-template-columns:1fr;gap:8px;}
+    .proj-card{padding:13px 14px;}
+    .proj-card:hover{transform:none;}
+    .proj-card a{font-size:14px;}
+    .proj-card p{font-size:12px;}
+
+    .skill-line{font-size:14px;margin-bottom:12px;}
+    .tag-cloud{gap:6px;margin-top:18px;}
+    .tag-cloud span{font-size:11px;padding:6px 10px;}
+
+    .posts{border-radius:8px;}
+    .post{flex-direction:column;align-items:flex-start;gap:6px;padding:12px 14px;}
+    .post a{font-size:13.5px;}
+    .post span{font-size:10px;}
+
+    footer{padding:56px 0 28px;}
+    .footer-cta{font-size:clamp(28px,9vw,40px);margin-bottom:12px;}
+    .footer-sub{font-size:14px;margin-bottom:22px;}
+    .footer-links{gap:7px;margin-bottom:32px;}
+    .footer-links a{font-size:11px;padding:8px 12px;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px;padding-top:16px;}
+  }
+
+  @media(max-width:380px){
+    .hero-name{font-size:36px;}
+    .hero-stats strong{font-size:20px;}
+    .nav-left span:nth-child(2){display:none;}
+  }
+
+  @media (hover: none){
+    .rec-card:hover,
+    .proj-card:hover,
+    .btn:hover{transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-left"><span class="clockdot"></span><span>LOCAL/</span><span id="clock">00:00:00</span></div>
+    <nav class="navlinks" id="navlinks" aria-label="Primary">
+      <button data-target="about">About</button>
+      <button data-target="recognition">Recognition</button>
+      <button data-target="methodology">Methodology</button>
+      <button data-target="projects">Projects</button>
+      <button data-target="skills">Skills</button>
+      <button data-target="writing">Writing</button>
+      <button data-target="contact">Contact</button>
+    </nav>
+    <span class="nav-status"><span class="d"></span>Available for work</span>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap" id="top">
+    <div class="hero-tag"><span class="d"></span>Bug bounty hunter / security researcher</div>
+    <h1 class="hero-name">Raunak<br>Gupta<span class="ghost">.01</span></h1>
+    <div class="hero-role">
+      <span>Security Researcher</span><span class="sep"></span><span>B1scuit Security</span><span class="sep"></span><span>Rajasthan, India</span>
+    </div>
+    <p class="lede">I find and responsibly disclose vulnerabilities across web, API, Android, iOS, and thick-client applications. Credited by <b>Supabase, Zerodha, Telekom, Motorola Solutions</b>, and others, with a CVE on record and <b>8,400+ students</b> taught on <a href="https://www.udemy.com/user/ronak-gupta-41/" target="_blank" rel="noopener">Udemy</a>.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#recognition">View recognition</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      <a class="btn btn-ghost" href="https://github.com/Raunaksplanet" target="_blank" rel="noopener">GitHub →</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>23+</strong><span>Acknowledgments</span></div>
+      <div><strong>1</strong><span>CVE on record</span></div>
+      <div><strong>8.4k+</strong><span>Students taught</span></div>
+      <div><strong>14</strong><span>Open-source tools</span></div>
+    </div>
+  </section>
+
+  <section class="block wrap" id="about">
+    <div class="sec-head reveal">
+      <div class="eyebrow">01 — About</div>
+      <h2 class="sec-title">Who I am</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div>
+        <p>B1scuit Security is a freelance practice covering web application, API, Android, iOS, and thick-client (macOS/Windows) assessments, spanning bug bounty engagements and independent research.</p>
+        <p>Active hunter on <b>HackerOne, Bugcrowd, YesWeHack, and GObugfree</b>, with disclosures ranging from access control failures and remote code execution to business logic flaws and cloud misconfigurations across fintech, healthtech, telecom, and consumer platforms.</p>
+        <p>Beyond hunting, I maintain an open-source toolkit for Android and web reconnaissance, and publish teaching material through YouTube, Medium, and Udemy.</p>
+      </div>
+      <div class="facts">
+        <div>Education<span>BCA, Dezyne École College</span></div>
+        <div>Based in<span>Rajasthan, India</span></div>
+        <div>Platforms<span>HackerOne · Bugcrowd · YesWeHack · GObugfree</span></div>
+        <div>Site<span><a href="https://www.b1scuit.pro" target="_blank" rel="noopener">b1scuit.pro</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap alt" id="recognition">
+    <div class="sec-head reveal">
+      <div class="eyebrow">02 — Recognition</div>
+      <h2 class="sec-title">Selected acknowledgments</h2>
+      <p class="sec-note">Critical and high severity disclosures across enterprise and consumer platforms, plus a first CVE from independent research.</p>
+    </div>
+
+    <div class="rec-grid reveal" id="featured-cards"></div>
+
+    <div class="rec-more-label reveal">Additional acknowledgments</div>
+    <div class="rec-list reveal" id="rec-list"></div>
+  </section>
+
+  <section class="block wrap" id="methodology">
+    <div class="sec-head reveal">
+      <div class="eyebrow">03 — Methodology</div>
+      <h2 class="sec-title">How I work</h2>
+      <p class="sec-note">A tight loop from attack surface to validated impact and clean remediation guidance.</p>
+    </div>
+    <div class="method-grid reveal">
+      <div class="method-card">
+        <div class="method-num">01 / Recon</div>
+        <h3>Recon</h3>
+        <ul>
+          <li>Map the attack surface</li>
+          <li>Enumerate endpoints and assets</li>
+          <li>Identify tech stack and entry points</li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <div class="method-num">02 / Exploit</div>
+        <h3>Exploitation</h3>
+        <ul>
+          <li>Test authentication and authorization</li>
+          <li>Chain findings into working exploits</li>
+          <li>Validate real-world impact</li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <div class="method-num">03 / Report</div>
+        <h3>Report</h3>
+        <ul>
+          <li>Root cause analysis</li>
+          <li>Clear reproduction steps</li>
+          <li>Actionable remediation guidance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap alt" id="projects">
+    <div class="sec-head reveal">
+      <div class="eyebrow">04 — Projects</div>
+      <h2 class="sec-title">Open source</h2>
+      <p class="sec-note">Tools and guides for Android, web recon, and Burp Suite workflows.</p>
+    </div>
+    <div class="proj-filters reveal" id="proj-filters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="Learning">Learning</button>
+      <button data-filter="Android">Android</button>
+      <button data-filter="Web">Web</button>
+      <button data-filter="Burp Extension">Burp</button>
+    </div>
+    <div class="proj-grid reveal" id="proj-grid"></div>
+  </section>
+
+  <section class="block wrap" id="skills">
+    <div class="sec-head reveal">
+      <div class="eyebrow">05 — Skills</div>
+      <h2 class="sec-title">Stack &amp; focus</h2>
+    </div>
+    <div class="reveal">
+      <p class="skill-line"><b>Surfaces:</b> Web applications, REST &amp; GraphQL APIs, Android, iOS, and thick-client (macOS/Windows) applications.</p>
+      <p class="skill-line"><b>Techniques:</b> IDOR, broken access control, race conditions, mass assignment, SQL injection, XSS, JWT attacks, SSL pinning bypass, root detection bypass, business logic flaws, cloud misconfigurations.</p>
+      <p class="skill-line"><b>Teaching:</b> 8,400+ learners across Udemy courses on offensive security and bug bounty methodology.</p>
+      <div class="tag-cloud">
+        <span>Burp Suite</span><span>Frida</span><span>Python</span><span>Git</span><span>Linux</span><span>Android</span><span>iOS</span><span>REST APIs</span><span>GraphQL</span><span>Docker</span><span>Postman</span><span>Wireshark</span><span>Nmap</span><span>JADX</span><span>APKTool</span><span>MobSF</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap alt" id="writing">
+    <div class="sec-head reveal">
+      <div class="eyebrow">06 — Writing</div>
+      <h2 class="sec-title">Writeups</h2>
+      <p class="sec-note">Public research notes, case studies, and learning resources.</p>
+    </div>
+    <div class="posts reveal">
+      <div class="post"><a href="https://medium.com/legionhunters/js-recon-to-html-injection-4cdca8fd88cf" target="_blank" rel="noopener">From JS Recon to HTML Injection</a><span>Medium</span></div>
+      <div class="post"><a href="https://medium.com/meetcyber/h-cking-hospital-for-mass-pii-leak-85c3d89db434" target="_blank" rel="noopener">Hacking Hospital: Mass PII Leak</a><span>Medium</span></div>
+      <div class="post"><a href="https://medium.com/@RaunakGupta1922/the-thousand-dollar-bug-07955ff2ba57" target="_blank" rel="noopener">The Thousand Dollar Bug</a><span>Medium</span></div>
+      <div class="post"><a href="https://osintteam.blog/30-books-to-learn-h-acking-2911c57f148c" target="_blank" rel="noopener">30 Must-Read Books to Learn Hacking</a><span>OSINT Team</span></div>
+      <div class="post"><a href="https://osintteam.blog/55-youtube-channels-to-learn-hacking-b5167d3125d9" target="_blank" rel="noopener">55 YouTube Channels to Learn Hacking</a><span>OSINT Team</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap" id="contact">
+  <div class="sec-head reveal">
+    <div class="eyebrow">07 — Contact</div>
+  </div>
+  <div class="footer-cta reveal">Let's work<br><span class="out">together.</span></div>
+  <p class="footer-sub reveal">Open to bug bounty collabs, pentest engagements, and security research work.</p>
+  <div class="footer-links reveal">
+    <a href="https://www.linkedin.com/in/raunak-gupta-772408255/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://hackerone.com/raunakgupta100100" target="_blank" rel="noopener">HackerOne</a>
+    <a href="https://yeswehack.com/hunters/B1scuit" target="_blank" rel="noopener">YesWeHack</a>
+    <a href="https://github.com/Raunaksplanet" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://medium.com/@RaunakGupta1922" target="_blank" rel="noopener">Medium</a>
+    <a href="https://www.youtube.com/@BiscuitSecurity" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://x.com/OreoB1scuit" target="_blank" rel="noopener">X / Twitter</a>
+    <a href="https://discord.gg/8SSx5Ma9ve" target="_blank" rel="noopener">Discord</a>
+    <a href="https://www.b1scuit.pro" target="_blank" rel="noopener">b1scuit.pro</a>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Raunak Gupta · B1scuit Security</span>
+    <button type="button" id="to-top">Back to top ↑</button>
+  </div>
+</footer>
+
+<script>
+  function esc(s){
+    return String(s)
+      .replace(/&/g,'&amp;')
+      .replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;')
+      .replace(/'/g,'&#39;');
+  }
+
+  function tick(){
+    const el = document.getElementById('clock');
+    if(el) el.textContent = new Date().toLocaleTimeString('en-GB', {hour12:false});
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  const progress = document.getElementById('progress');
+  window.addEventListener('scroll', ()=>{
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+  }, {passive:true});
+
+  const navlinks = document.getElementById('navlinks');
+  const navToggle = document.getElementById('nav-toggle');
+  function setMenu(open){
+    navlinks.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.textContent = open ? '✕' : '☰';
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  navToggle.addEventListener('click', ()=> setMenu(!navlinks.classList.contains('open')));
+  window.addEventListener('resize', ()=>{ if(window.innerWidth > 860) setMenu(false); });
+
+  const featured = [
+    {sev:'critical', target:'GObugfree (private program)', desc:'Remote Code Execution', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_bugbounty-rce-activity-7475553662551945216-Rv-n'},
+    {sev:'high', target:'Telekom', desc:'Public OBS buckets exposing build artifacts, root password hash, and internal infrastructure', url:'https://www.telekom.com/en/company/data-privacy-and-security/news/acknowledgements-358300'},
+    {sev:'high', target:'Supabase', desc:'Broken access control and insecure API handling', url:'https://hackerone.com/supabase/thanks?type=team'},
+    {sev:'high', target:'Zerodha', desc:'Android, business logic, and security misconfigurations', url:'https://cyber.comolho.com/programs/bug-bounty/zerodha-broking-limited/150/?tab=halloffame&page=1'},
+    {sev:'high', target:'cert-wm.nl', desc:'Stored XSS via unrestricted file upload', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_bugbounty-cybersecurity-ethicalhacking-activity-7402614513273077760-gGg2'},
+    {sev:'cve', target:'mettle / sendportal', desc:'CVE-2026-7145 — authorization bypass (IDOR), versions ≤ 3.0.1', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_cve-bugbounty-vulnerabilityresearch-activity-7454746827536474112-jBy3'},
+  ];
+  const fc = document.getElementById('featured-cards');
+  featured.forEach(f=>{
+    const card = document.createElement('article');
+    card.className = 'rec-card';
+    const label = f.sev === 'cve' ? 'CVE-2026-7145' : f.sev;
+    const nameHtml = f.url
+      ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.target)}</a>`
+      : esc(f.target);
+    card.innerHTML = `
+      <span class="tag ${esc(f.sev)}">${esc(label)}</span>
+      <h3>${nameHtml}</h3>
+      <p>${esc(f.desc)}</p>
+      <span class="go">View proof →</span>
+    `;
+    if(f.url){
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', e=>{
+        if(e.target.closest('a')) return;
+        window.open(f.url, '_blank', 'noopener');
+      });
+    }
+    fc.appendChild(card);
+  });
+
+  const more = [
+    {sev:'Medium', target:'Thinkst Canary', desc:'Mass PII leak', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_bugbounty-ethicalhacking-cybersecurity-activity-7389536397864595456-tPLG'},
+    {sev:'Medium', target:'Substack', desc:'Race condition: atomic increment manipulation', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_i-reported-a-bug-to-substack-on-may-7-2025-activity-7401211004958982144-_lnL'},
+    {sev:'Medium', target:'GeeksForGeeks', desc:'Mass assignment vulnerability', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_bugbounty-cybersecurity-infosec-activity-7343935493392261120-kJl8'},
+    {sev:'Medium', target:'Wibmo.com', desc:'IDOR: email disclosure', url:'https://cyber.comolho.com/verify-certificate/38e591e4-4fe6-4b25-be1a-74f18c493325/'},
+    {sev:'Medium', target:'EC-Council', desc:'Email verification bypass', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_ittakesacrowd-vulnerability-bugbounty-activity-7383724978598420480-Thjx'},
+    {sev:'Medium', target:'Inflectra.com', desc:'Open redirect and PII leak', url:'https://www.inflectra.com/Company/Responsible-Disclosure.aspx'},
+    {sev:'Medium', target:'Skillmate.ai', desc:'Security bypass and insecure API', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_vulnerability-bugbounty-security-activity-7366694064626298880-UaiH'},
+    {sev:'Medium', target:'Motorola Solutions', desc:'Hall of Fame acknowledgement', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_motorola-solutions-hall-of-fame-check-it-activity-7462198429348380672-sRSX'},
+    {sev:'Medium', target:'Udemy', desc:'IDOR, course content leak since 2024', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_got-marked-as-a-duplicate-for-a-bug-that-activity-7458038563880964096-sJrB'},
+    {sev:'Low', target:'Samsung', desc:'Misconfigured AWS S3 bucket', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_ittakesacrowd-vulnerability-bugbounty-activity-7383724978598420480-Thjx'},
+    {sev:'Low', target:'Chess.com', desc:'CWE-657 insecure design', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_bugbounty-cybersecurity-hackerlife-activity-7361975257320050688-cttv'},
+    {sev:'Low', target:'Arcjet.com', desc:'CWE-657 insecure design', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_vulnerability-bugbounty-security-activity-7364553927519858688-k9l1'},
+    {sev:'Low', target:'CK Birla Hospital', desc:'Security bypass and insecure API', url:'https://cyber.comolho.com/researcher/profile/B1scuit/?activity-log-page=1&hof-page=1'},
+    {sev:'Low', target:'Sir Ganga Ram Hospital', desc:'Security bypass and insecure API', url:'https://cyber.comolho.com/researcher/profile/B1scuit/?activity-log-page=1&hof-page=1'},
+    {sev:'Low', target:'Max Healthcare', desc:'Security bypass and insecure API', url:'https://cyber.comolho.com/researcher/profile/B1scuit/?activity-log-page=1&hof-page=1'},
+    {sev:'Low', target:'Com Olho', desc:'Security bypass and insecure API', url:'https://www.linkedin.com/posts/raunak-gupta-772408255_cybersecurity-comolho-crowdsourcedsecurity-activity-7396831483987976192-qjaM'},
+    {sev:'Low', target:'Brandmuscle.com', desc:'Security bypass and insecure API', url:'https://cyber.comolho.com/researcher/profile/B1scuit/?activity-log-page=1&hof-page=1'},
+  ];
+  const list = document.getElementById('rec-list');
+  more.forEach(m=>{
+    const row = document.createElement('div');
+    row.className = 'rec-row';
+    const nameHtml = m.url
+      ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.target)}</a>`
+      : esc(m.target);
+    row.innerHTML = `
+      <span class="name">${nameHtml}</span>
+      <span class="sev">${esc(m.sev)}</span>
+      <span class="desc">${esc(m.desc)}</span>
+    `;
+    list.appendChild(row);
+  });
+
+  const projects = [
+    {cat:'Learning', name:'My CyberSecurity Store', desc:'Curated infosec tools & references', url:'https://github.com/Raunaksplanet/My-CyberSecurity-Store'},
+    {cat:'Learning', name:'Bug Bounty GitBook', desc:'Methodologies, writeups & checklists', url:'https://github.com/Raunaksplanet/Bug-Bounty-GitBook'},
+    {cat:'Learning', name:'Learn Android Bug Bounty', desc:'Guide to Android app pentesting', url:'https://github.com/Raunaksplanet/Learn-android-bug-bounty'},
+    {cat:'Learning', name:'Learn Beyond Web', desc:'Guide to thick-client security testing', url:'https://github.com/Raunaksplanet/Learn-Thick-client-bug-bounty'},
+    {cat:'Android', name:'APKDig', desc:'Deep APK security analysis', url:'https://github.com/Raunaksplanet/APKDig'},
+    {cat:'Android', name:'analyze_manifest', desc:'Manifest analyzer: permissions, deep links', url:'https://github.com/Raunaksplanet/analyze_manifest'},
+    {cat:'Android', name:'AndroidExportViewer', desc:'Analyze exported components', url:'https://github.com/Raunaksplanet/AndroidExportViewer'},
+    {cat:'Android', name:'PullAPKFromPure', desc:'Extract APKs from device', url:'https://github.com/Raunaksplanet/PullAPKFromPure'},
+    {cat:'Web', name:'Bruteforce JWT Secret', desc:'Weak JWT secret brute-forcing', url:'https://github.com/Raunaksplanet/Bruteforce-JWT-Secret'},
+    {cat:'Web', name:'Elite Burp Suite Analyzer', desc:'Advanced HTTP history filtering', url:'https://github.com/Raunaksplanet/Elite-Burp-Suite-HTTP-History-Analyzer'},
+    {cat:'Web', name:'GitHub Recon Tool', desc:'Repo & org reconnaissance', url:'https://github.com/Raunaksplanet/GitHub-Repository-Reconnaissance-Tool'},
+    {cat:'Web', name:'CloneAllRepo', desc:'Clone all repos from a user/org', url:'https://github.com/Raunaksplanet/CloneAllRepo'},
+    {cat:'Burp Extension', name:'AutoTabSorter', desc:'Automatic tab organization', url:'https://github.com/Raunaksplanet/AutoTabSorter-BurpSuiteExtension'},
+    {cat:'Burp Extension', name:'CVSS Calculator', desc:'Integrated CVSS scoring', url:'https://github.com/Raunaksplanet/CVSS-Calculator-BurpSuiteExtension'},
+  ];
+  const pg = document.getElementById('proj-grid');
+  projects.forEach(p=>{
+    const card = document.createElement('article');
+    card.className = 'proj-card';
+    card.dataset.cat = p.cat;
+    card.innerHTML = `
+      <div class="cat">${esc(p.cat)}</div>
+      <a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.name)}</a>
+      <p>${esc(p.desc)}</p>
+    `;
+    pg.appendChild(card);
+  });
+
+  document.getElementById('proj-filters').addEventListener('click', e=>{
+    const btn = e.target.closest('button[data-filter]');
+    if(!btn) return;
+    document.querySelectorAll('#proj-filters button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.proj-card').forEach(card=>{
+      card.classList.toggle('hidden', filter !== 'all' && card.dataset.cat !== filter);
+    });
+  });
+
+  const navButtons = document.querySelectorAll('.navlinks button');
+  function goTo(id){
+    const el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+    setMenu(false);
+  }
+  navButtons.forEach(btn=>{
+    btn.addEventListener('click', ()=> goTo(btn.dataset.target));
+  });
+  document.getElementById('to-top').addEventListener('click', ()=> goTo('top'));
+
+  const sectionIds = [...navButtons].map(b=>b.dataset.target);
+  const sectionEls = sectionIds.map(id=>document.getElementById(id)).filter(Boolean);
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        navButtons.forEach(b=>b.classList.remove('active'));
+        const match = document.querySelector(`.navlinks button[data-target="${entry.target.id}"]`);
+        if(match) match.classList.add('active');
+      }
+    });
+  }, {rootMargin:'-40% 0px -50% 0px', threshold:0});
+  sectionEls.forEach(s=>observer.observe(s));
+
+  const revealObs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        revealObs.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+</script>
+
+</body>
+</html>
