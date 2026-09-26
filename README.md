@@ -27,15 +27,12 @@
 - 🔍 Freelance Security Researcher & Bug Bounty Hunter
 - 🎯 Specializing in: Android • Web • API • Thick-Client Security
 - 🤖 Also into: Open-Source • AI • LLMs
-- 📍 Location: Rajasthan, India
-- 🟢 Status: Available for hire
 - 🎯 **Bug Bounty Hunter** on HackerOne & YesWeHack - featured in **18+ Hall of Fames**
 - 🛠️ Building open-source security tools for the community
 - 📹 Running **[B1scuit Security](https://www.youtube.com/@BiscuitSecurity)** on YouTube - hacking tutorials & writeups
 - ✍️ Writing on **[Medium](https://medium.com/@RaunakGupta1922)** - bug bounty tips, resources & POCs
 - 🎓 Udemy instructor with **8,400+ learners**
 - 💬 Running an active **[Discord community](https://discord.gg/8SSx5Ma9ve)** for security researchers
-- 🌐 Personal site: **[b1scuit.pro](https://www.b1scuit.pro)**
 
 ---
 
