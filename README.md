@@ -36,4 +36,4 @@ Security researcher working on Android, Web, API and thick-client security. I bu
 - LinkedIn: [raunak-gupta-772408255](https://www.linkedin.com/in/raunak-gupta-772408255/)
 - X: [@OreoB1scuit](https://x.com/OreoB1scuit)
 - Discord: [community server](https://discord.gg/8SSx5Ma9ve)
-- Portfolio: [b1scuit.pro](https://www.b1scuit.pro)
+- Portfolio: [biscuitsecurity.com](https://biscuitsecurity.com/)
