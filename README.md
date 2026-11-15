@@ -4,7 +4,8 @@ Security researcher working on Android, Web, API and thick-client security. I bu
 
 ## Tools
 
-* [boomer](https://github.com/Raunaksplanet/boomer) - Load testing tool
+* [boomer](https://github.com/Raunaksplanet/boomer) - Subdomain recon, status codes and full-page screenshots
+* [websnap](https://github.com/Raunaksplanet/websnap) - Full-page screenshots for recon
 * [Tor-IP-Changer-Script](https://github.com/Raunaksplanet/Tor-IP-Changer-Script) - Rotate IP over Tor
 * [endpoint-finder](https://github.com/Raunaksplanet/endpoint-finder) - Endpoint discovery helper
 * [techdetect](https://github.com/Raunaksplanet/techdetect) - Tech-stack detection for websites
