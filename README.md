@@ -4,7 +4,6 @@ Security researcher working on Android, Web, API and thick-client security. I bu
 
 ## Tools
 
-* [boomer](https://github.com/Raunaksplanet/boomer) - Subdomain recon, status codes and full-page screenshots
 * [websnap](https://github.com/Raunaksplanet/websnap) - Full-page screenshots for recon
 * [Tor-IP-Changer-Script](https://github.com/Raunaksplanet/Tor-IP-Changer-Script) - Rotate IP over Tor
 * [endpoint-finder](https://github.com/Raunaksplanet/endpoint-finder) - Endpoint discovery helper
@@ -13,6 +12,7 @@ Security researcher working on Android, Web, API and thick-client security. I bu
 * [h1-hacktivity-crawler](https://github.com/Raunaksplanet/h1-hacktivity-crawler) - HackerOne hacktivity crawler
 * [xcode-mcp-server](https://github.com/Raunaksplanet/xcode-mcp-server) - Control Xcode from AI assistants via MCP
 * [bug-hunter-toolkit](https://github.com/Raunaksplanet/bug-hunter-toolkit) - Recon, testing and methodology toolkit
+* [boomer](https://github.com/Raunaksplanet/boomer) - Subdomain recon, status codes and full-page screenshots
 * [GitHub-Repository-Reconnaissance-Tool](https://github.com/Raunaksplanet/GitHub-Repository-Reconnaissance-Tool) - Git repo recon and secret scanning
 
 ## Learning resources
